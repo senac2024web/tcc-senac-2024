@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado Final</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="quiz-container" id="quiz-container">
+        <h1>Resultado Final</h1>
+        <div class="resultado">
+            <p id="resultado-texto"></p>
+        </div>
+
+        <h2>Ranking</h2>
+        <ol id="ranking-list">
+          
+        </ol>
+
+        <button onclick="reiniciarQuiz()">Reiniciar Quiz</button>
+    </div>
+
+    <script>
+        function mostrarResultado() {
+            let acertos = localStorage.getItem('acertos') || 0;
+            acertos = parseInt(acertos);
+
+            const resultadoTexto = document.getElementById('resultado-texto');
+            resultadoTexto.textContent = `Você acertou ${acertos} de 3 perguntas!`;
+
+           
+            const ranking = JSON.parse(localStorage.getItem('ranking')) || [];
+            ranking.sort((a, b) => b.acertos - a.acertos); 
+
+            const rankingList = document.getElementById('ranking-list');
+            rankingList.innerHTML = ''; 
+
+            ranking.forEach(player => {
+                const li = document.createElement('li');
+                li.textContent = `${player.nome} - ${player.acertos} acertos`;
+                rankingList.appendChild(li);
+            });
+        }
+
+      
+        mostrarResultado();
+
+       
+        function reiniciarQuiz() {
+            
+            localStorage.setItem('acertos', 0); 
+
+            window.location.href = 'inicio.html'; 
+        }
+    </script>
+</body>
+</html>

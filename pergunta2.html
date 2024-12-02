@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Interativo - Pergunta 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="quiz-container" id="quiz-container">
+        <h1>Quiz de Conhecimento Geral</h1>
+        <div class="questoes">
+            <p>Qual é o maior planeta do Sistema Solar?</p>
+        </div>
+
+        <div class="opcoes">
+            <div class="coluna-esquerda">
+                <label>
+                    <input type="radio" name="quiz-opcoes" value="terreno"> Terra
+                </label>
+                <label>
+                    <input type="radio" name="quiz-opcoes" value="jupiter" checked> Júpiter
+                </label>
+            </div>
+            <div class="coluna-direita">
+                <label>
+                    <input type="radio" name="quiz-opcoes" value="venus"> Vênus
+                </label>
+                <label>
+                    <input type="radio" name="quiz-opcoes" value="marte"> Marte
+                </label>
+            </div>
+        </div>
+        
+        <button class="botao-enviar" id="botaoenviar" onclick="verificarresposta()">Próxima</button>
+        
+        <p id="result" class="hidden"></p>
+    </div>
+
+    <script src="02.js"></script> 
+</body>
+</html>

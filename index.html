@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Início do Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="quiz-container" id="quiz-container">
+
+        <h1 class="corh1">Quiz de Conhecimento Geral <input type="color" name="" id="trocar-cor"> <button class="botao">Cor da letra</button></h1>
+
+        <p class="corp">Digite seu nome para começar:</p>
+
+
+        <input type="text" id="nome-jogador" placeholder="Seu nome" required>
+        <button onclick="iniciarQuiz()">Iniciar Quiz</button>
+
+        <div> <input type="color" name="" id="cor-container">
+            <button class="botao2">Cor de fundo</button></div>
+    </div>
+
+    <footer><p>Desenvolvido por <strong><a href="https://ezequiascodemaster.vercel.app/" target="_blank">Ezequias gs costa</a></strong></p></footer>
+    
+    <script>
+       
+
+        const botao = document.querySelector(".botao")
+        const letrah1 = document.querySelector(".corh1")
+        const letrap = document.querySelector(".corp")
+        const inputcor = document.querySelector ("#trocar-cor")
+        const inputcor2 = document.querySelector ("#cor-container")
+        const container = document.querySelector(".quiz-container")
+        const botao2 = document.querySelector(".botao2")
+        
+        botao.onclick = function() {
+            letrah1.style.color = inputcor.value
+            letrap.style.color = inputcor.value
+        };
+        
+        botao2.onclick = function() {
+            container.style.backgroundColor = inputcor2.value
+
+        }
+
+     
+
+
+
+        function iniciarQuiz() {
+            const nomeJogador = document.getElementById('nome-jogador').value;
+
+            if (!nomeJogador) {
+                alert("Por favor, digite seu nome!");
+                return;
+            }
+
+           
+            localStorage.setItem('nomeJogador', nomeJogador);
+
+            window.location.href = 'pergunta1.html';
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.quiz-container {
+    background: #b47979;
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    max-height: 500px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+h1 {
+    color: #000000;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.questoes p {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    color: #ffe2e2;
+}
+
+.opcoes {
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.opcoes label {
+    display: block;
+    font-size: 2em;
+    cursor: pointer;
+    color: #000000;
+    background-color: #0056b3;
+    width: 400px;
+    height: 100px;
+    border-radius: 15px;
+    margin-top: 50px;
+    margin-right: 15px;
+    padding-top: 10px;
+}
+
+.opcoes input {
+    margin-right: 10px;
+}
+
+#nome-jogador {
+    width: 50%;
+    height: 5%;
+}
+
+.botao-enviar {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.botao-enviar:hover {
+    background-color: #0056b3;
+}
+
+.hidden {
+    display: none;
+}
+
+#result {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+footer {
+    width: 100vw;
+    margin-top: 50px;
+    background-color: #000000;
+    color: beige;
+    text-align: center;
+}
+
+footer a {
+    color: #f0f4f8;
+    text-decoration: none;
+    animation: pulsar 15s infinite;
+}
+
+@keyframes pulsar {
+    0%, 100% {
+        color: #b30077;
+        opacity: 1;
+    }
+
+    20% {
+        color: #681b1b;
+        opacity: 0.3;
+    }
+
+    40% {
+        color: #2e00fd;
+        opacity: 0.4;
+    }
+
+    60% {
+        color: #074d50;
+        opacity: 0.6;
+    }
+
+    80% {
+        color: #b41111;
+        opacity: 0.8;
+    }
+}
